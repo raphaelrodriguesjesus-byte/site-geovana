@@ -944,20 +944,11 @@
     <script>
         /* ============================================
            DADOS DOS AMIGOS - EDITE AQUI!
-           
-           Para adicionar um amigo:
-           1. Copie um objeto { } existente
-           2. Cole abaixo do ultimo
-           3. Edite os dados
-           
-           Para as fotos, coloque os arquivos na mesma
-           pasta do index.html e use apenas o nome do arquivo
-           Ex: "img/foto-raphael.jpg"
            ============================================ */
         const amigos = [
             {
                 nome: "Raphael",
-                relacao: "auzinho eu",
+                relacao: " auzinho eu ",
                 avatar: "img/raphael-fotoperfil01.jpeg",
                 fotoDestaque: "img/raphael-fotocomgeovana.jpeg",
                 legendaFoto: "Nossa viagem inesquecivel!",
@@ -970,60 +961,45 @@
                 avatar: "img/marianny-fotoperfil01.jpeg",
                 fotoDestaque: "img/marianny-fotocomgeovana.jpeg",
                 legendaFoto: "Amigas desde sempre!",
-                mensagem: "Oiii jojo! Nesse momento vc ja deve ter recebido sua surpresa, entao ja posso perguntar: Arrasamos?! Antes de mais nada quero que saiba que foi uma ideia muito especial.",
+                mensagem: "Oiii jojo! Nesse momento vc ja deve ter recebido sua surpresa, entao ja posso perguntar: Arrasamos?! Antes de mais nada quero que saiba que foi uma ideia muito especial. Te amo!",
                 assinatura: "Te amo, Geovana"
             },
             {
-                nome: "Mae geovana",
-                relacao: "Mae mais linda do mundo",
-                avatar: "img/mae-geovana-fotoperfil.jpeg",
-                fotoDestaque: "img/mae-geovana-fotocomgeovana.jpeg",
-                legendaFoto: "Passeio no shopping!",
-                mensagem: "Minha pessoa favorita! Obrigada por sempre estar do meu lado, nas risadas e nas lagrimas. Voce e a irma que eu escolhi. Feliz dia, meu amor!",
-                assinatura: "TE AMO, MAE"
+                nome: "Davylla",
+                relacao: "Amiga especial",
+                avatar: "img/davylla-fotoperfil01.jpeg",
+                fotoDestaque: "img/davylla-fotocomgeovana.jpeg",
+                legendaFoto: "Momentos inesqueciveis!",
+                mensagem: "Geo querida! Nao tenho palavras para descrever o quanto voce e importante. Obrigada por ser essa pessoa incrivel todos os dias. Muitos anos de felicidade pra ti!",
+                assinatura: "Com carinho, Davylla"
+            },
+            {
+                nome: "Duda",
+                relacao: "Amiga do coração",
+                avatar: "img/duda-foto01.jpeg",
+                fotoDestaque: "img/duda-foto01.jpeg",
+                legendaFoto: "Um sorriso que ilumina!",
+                mensagem: "Geovana, voce e uma pessoa tao especial e radiante! Muito obrigada por todos os momentos felizes que passamos juntas. Feliz aniversario, linda!",
+                assinatura: "Abraço apertado, Duda"
             },
             {
                 nome: "Daniel",
-                relacao: "Daniel amigo",
+                relacao: "Amigo querido",
                 avatar: "img/daniel-fotoperfil.jpeg",
                 fotoDestaque: "img/daniel-fotocomgeovana.jpeg",
                 legendaFoto: "TRII LOUCOS!!",
-                mensagem: "Geovana, como definir essa linda, incrivel, charmosa, atenciosa, carinhosa e carismatica mulher? Nao sei mas so sei que ela e uma pessoa incrivel!",
+                mensagem: "Geovana, como definir essa linda, incrivel, charmosa, atenciosa, carinhosa e carismatica mulher? Nao sei mas so sei que ela e uma pessoa incrivel! Te admiro muito!",
                 assinatura: "Abraco, Daniel"
-            },
-            {
-                nome: "Rafaella",
-                relacao: "amiga querida",
-                avatar: "img/rafaella-fotoperfil01.jpeg",
-                fotoDestaque: "img/rafaella-fotocomgeovana.jpeg",
-                legendaFoto: "Natal em familia!",
-                mensagem: "Feliz aniversario geooo!! Muitos anos de vida pra ti viu, eu queria te agradecer por todos esses anos de amizade que temos juntas.",
-                assinatura: "Com carinho, Rafaella"
             }
         ];
 
         /* ============================================
-           DADOS DA GALERIA
-           ============================================ */
-        const galeria = {
-            fotos: [
-                { titulo: "Momento especial", descricao: "Uma lembranca linda", imagem: "img/foto1.jpeg" },
-                { titulo: "Risadas", descricao: "So diversao", imagem: "img/foto2.jpeg" },
-                { titulo: "Encontro", descricao: "Nos juntos", imagem: "img/foto3.jpeg" }
-            ],
-            videos: [
-                { titulo: "Surpresa 1", descricao: "Video especial", video: "img/video1.mp4" },
-                { titulo: "Surpresa 2", descricao: "Momentos felizes", video: "img/video2.mp4" }
-            ]
-        };
-
-        /* ============================================
-           FUNCOES DO SISTEMA DE ABAS
+           FUNCOES PARA ABAS - CORRIGIDO!
            ============================================ */
         
-        // Funcao para mudar de aba
+        // Mudar de aba
         function mudarAba(tabName) {
-            // Remove active de todos os tabs
+            // Remove active de todas as abas
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
@@ -1033,14 +1009,14 @@
                 btn.classList.remove('active');
             });
             
-            // Adiciona active ao tab clicado
+            // Adiciona active na aba clicada
             document.getElementById('tab-' + tabName).classList.add('active');
             
-            // Adiciona active ao botao clicado
+            // Adiciona active no botao clicado
             document.querySelector('[data-tab="' + tabName + '"]').classList.add('active');
         }
 
-        // Event listeners para os botoes das abas
+        // Event listeners para os botoes
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 mudarAba(this.getAttribute('data-tab'));
@@ -1065,21 +1041,17 @@
             document.getElementById(modalId).classList.remove('active');
         }
 
-        // Fechar modal ao clicar fora
+        // Fechar ao clicar fora
         document.getElementById('modal-carta').addEventListener('click', function(e) {
-            if (e.target === this) {
-                fecharModal('modal-carta');
-            }
+            if (e.target === this) fecharModal('modal-carta');
         });
 
         document.getElementById('modal-galeria').addEventListener('click', function(e) {
-            if (e.target === this) {
-                fecharModal('modal-galeria');
-            }
+            if (e.target === this) fecharModal('modal-galeria');
         });
 
         /* ============================================
-           GERACAO DINAMICA DOS CARDS DE AMIGOS
+           GERAR CARDS DE AMIGOS
            ============================================ */
         
         function gerarCardsAmigos() {
@@ -1104,58 +1076,13 @@
         }
 
         /* ============================================
-           GERACAO DINAMICA DA GALERIA
-           ============================================ */
-        
-        function gerarGaleria() {
-            // Gerar fotos
-            const fotoGrid = document.getElementById('galeria-fotos');
-            fotoGrid.innerHTML = '';
-            galeria.fotos.forEach(foto => {
-                const item = document.createElement('div');
-                item.className = 'galeria-item';
-                item.innerHTML = `
-                    <img src="${foto.imagem}" alt="${foto.titulo}">
-                    <div class="legenda">${foto.titulo}</div>
-                `;
-                item.addEventListener('click', () => {
-                    document.getElementById('galeria-modal-img').src = foto.imagem;
-                    document.getElementById('galeria-modal-titulo').textContent = foto.titulo;
-                    document.getElementById('galeria-modal-descricao').textContent = foto.descricao;
-                    document.getElementById('modal-galeria').classList.add('active');
-                });
-                fotoGrid.appendChild(item);
-            });
-
-            // Gerar videos
-            const videoGrid = document.getElementById('galeria-videos');
-            videoGrid.innerHTML = '';
-            galeria.videos.forEach(video => {
-                const item = document.createElement('div');
-                item.className = 'galeria-item video-item';
-                item.innerHTML = `
-                    <img src="${video.video}" alt="${video.titulo}">
-                    <div class="play-icon">&#9658;</div>
-                    <div class="legenda">${video.titulo}</div>
-                `;
-                item.addEventListener('click', () => {
-                    document.getElementById('galeria-modal-img').src = video.video;
-                    document.getElementById('galeria-modal-titulo').textContent = video.titulo;
-                    document.getElementById('galeria-modal-descricao').textContent = video.descricao;
-                    document.getElementById('modal-galeria').classList.add('active');
-                });
-                videoGrid.appendChild(item);
-            });
-        }
-
-        /* ============================================
-           FUNCAO DE DECORACAO (Estrelas e sabres)
+           DECORACOES ANIMADAS
            ============================================ */
         
         function gerarDecoracoes() {
             const decoracoes = document.getElementById('decoracoes');
             
-            // Gerar estrelas
+            // Estrelas
             for (let i = 0; i < 50; i++) {
                 const estrela = document.createElement('div');
                 estrela.className = 'estrela';
@@ -1165,7 +1092,7 @@
                 decoracoes.appendChild(estrela);
             }
             
-            // Gerar sabres de luz
+            // Sabres
             for (let i = 0; i < 3; i++) {
                 const sabre = document.createElement('div');
                 sabre.className = i % 2 === 0 ? 'sabre verde' : 'sabre roxo';
@@ -1177,13 +1104,12 @@
         }
 
         /* ============================================
-           INICIALIZAR PAGINA
+           INICIALIZAR
            ============================================ */
         
         document.addEventListener('DOMContentLoaded', function() {
             gerarDecoracoes();
             gerarCardsAmigos();
-            gerarGaleria();
         });
     </script>
 </body>
