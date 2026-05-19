@@ -941,7 +941,7 @@
         </div>
     </div>
 
-    <script>
+   <script>
         /* ============================================
            DADOS DOS AMIGOS - EDITE AQUI!
            ============================================ */
@@ -965,121 +965,97 @@
                 assinatura: "Te amo, Geovana"
             },
             {
-                nome: "Davylla",
-                relacao: "Amiga especial",
-                avatar: "img/davylla-fotoperfil01.jpeg",
-                fotoDestaque: "img/davylla-fotocomgeovana.jpeg",
-                legendaFoto: "Momentos inesqueciveis!",
-                mensagem: "Geo querida! Nao tenho palavras para descrever o quanto voce e importante. Obrigada por ser essa pessoa incrivel todos os dias. Muitos anos de felicidade pra ti!",
-                assinatura: "Com carinho, Davylla"
+                nome: "Virgílio",
+                relacao: "Amigo",
+                avatar: "img/virgilio-avatar.jpeg", /* Troque pelo caminho da foto */
+                fotoDestaque: "img/virgilio-foto.jpeg", /* Troque pelo caminho da foto */
+                legendaFoto: "Coloque a legenda aqui!",
+                mensagem: "Coloque a mensagem do Virgílio aqui...",
+                assinatura: "Com carinho, Virgílio"
             },
             {
-                nome: "Duda",
-                relacao: "Amiga do coração",
-                avatar: "img/duda-foto01.jpeg",
-                fotoDestaque: "img/duda-foto01.jpeg",
-                legendaFoto: "Um sorriso que ilumina!",
-                mensagem: "Geovana, voce e uma pessoa tao especial e radiante! Muito obrigada por todos os momentos felizes que passamos juntas. Feliz aniversario, linda!",
-                assinatura: "Abraço apertado, Duda"
-            },
-            {
-                nome: "Daniel",
-                relacao: "Amigo querido",
-                avatar: "img/daniel-fotoperfil.jpeg",
-                fotoDestaque: "img/daniel-fotocomgeovana.jpeg",
-                legendaFoto: "TRII LOUCOS!!",
-                mensagem: "Geovana, como definir essa linda, incrivel, charmosa, atenciosa, carinhosa e carismatica mulher? Nao sei mas so sei que ela e uma pessoa incrivel! Te admiro muito!",
-                assinatura: "Abraco, Daniel"
-            },
-            {
-                nome: "Mae geovana",
-                relacao: " Mae mais linda do mundo",
-                avatar: "img/mae-geovana-fotoperfil.jpeg",
-                fotoDestaque: "img/mae-geovana-fotocomgeovana.jpeg",
-                legendaFoto: "  EXEMPLO DE TEXTO: passeio nop shopping!",
-                mensagem: " EXEMPLO DE TEXTO :Minha pessoa favorita! Obrigada por sempre estar do meu lado, nas risadas e nas lagrimas. Voce e a irma que eu escolhi. Feliz dia, meu amor!",
-                assinatura: " EXEMPLO DE TEXTO :TE AMO, MAE "
-            },
-            {
-                nome: "Rafaella",
-                relacao: "amiga querida",
-                avatar: "img/rafaella-fotoperfil01.jpeg",
-                fotoDestaque: "img/rafaella-fotocomgeovana.jpeg",
-                legendaFoto: "EXEMPLO DE TEXTO: Natal em familia!",
-                mensagem: " EXEMPLO DE TEXTO :Prima mais linda! Crescemos juntas e voce sempre foi meu exemplo de forca e determinacao. Que Deus abencoe muito sua vida. Te amo infinito!",
-                assinatura: "EXEMPLO DE TEXTO: Sua BF rafaella"
-            },
-            {
-                nome: "Vírgilio",
-                relacao: "MELHOR PAI DO MUNDO",
-                avatar: "img/virgilio-fotoperfil.jpeg",
-                fotoDestaque: "img/virgilio-fotocomgeovana.jpeg",
-                legendaFoto: "EXEMPLO DE TEXTO: PASSEIO JUNTOS",
-                mensagem: "EXEMPLO DE TEXTO: Geovana, os anos de faculdade foram muito mais divertidos com voce! Obrigado por todas as risadas, estudos e festas. Voce merece o mundo!",
-                assinatura: "EXEMPLO DE TEXTO: Seu incrivel pai: "
-            },
-            {
-                nome: "Sabrina",
-                relacao: "Super irma",
-                avatar: "img/sabrina-fotoperfil01.jpeg",
-                fotoDestaque: "img/sabrina-fotocomgeovana.jpeg",
-                legendaFoto: "EXEMPLO DE TEXTO: Shopping therapy!",
-                mensagem: " EXEMPLO DE TEXTO :Minha pessoa favorita! Obrigada por sempre estar do meu lado, nas risadas e nas lagrimas. Voce e a irma que eu escolhi. Feliz dia, meu amor!",
-                assinatura: "EXEMPLO DE TEXTO: Forever yours, Sabrina"
+                nome: "Mãe da Geovana",
+                relacao: "Mãe",
+                avatar: "img/mae-avatar.jpeg", /* Troque pelo caminho da foto */
+                fotoDestaque: "img/mae-foto.jpeg", /* Troque pelo caminho da foto */
+                legendaFoto: "Amor de mãe!",
+                mensagem: "Coloque a mensagem da mãe dela aqui...",
+                assinatura: "Te amo filha!"
             },
             {
                 nome: "Victor",
-                relacao: "EXEMPLO DE TEXTO: Melhor amiga",
-                avatar: "img/victor-fotoperfil01.jpeg",
-                fotoDestaque: "img/victor-fotocomgeovana.jpeg",
-                legendaFoto: "EXEMPLO DE TEXTO: Shopping therapy!",
-                mensagem: " EXEMPLO DE TEXTO:Minha pessoa favorita! Obrigada por sempre estar do meu lado, nas risadas e nas lagrimas. Voce e a irma que eu escolhi. Feliz dia, meu amor!",
-                assinatura: "EXEMPLO DE TEXTO: Forever yours, VIctor"
+                relacao: "Amigo",
+                avatar: "img/victor-avatar.jpeg", /* Troque pelo caminho da foto */
+                fotoDestaque: "img/victor-foto.jpeg", /* Troque pelo caminho da foto */
+                legendaFoto: "Coloque a legenda aqui!",
+                mensagem: "Coloque a mensagem do Victor aqui...",
+                assinatura: "Abraços, Victor"
             }
-            
         ];
 
         /* ============================================
-           FUNCOES PARA ABAS - CORRIGIDO!
+           FUNÇÕES DO SITE (NÃO PRECISA MEXER AQUI)
            ============================================ */
-        
-        // Mudar de aba
-        function mudarAba(tabName) {
-            // Remove active de todas as abas
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Remove active de todos os botoes
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Adiciona active na aba clicada
-            document.getElementById('tab-' + tabName).classList.add('active');
-            
-            // Adiciona active no botao clicado
-            document.querySelector('[data-tab="' + tabName + '"]').classList.add('active');
-        }
 
-        // Event listeners para os botoes
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                mudarAba(this.getAttribute('data-tab'));
+        // 1. Função para trocar as abas (Navegação)
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove a classe 'active' de todos
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                // Adiciona 'active' apenas na aba clicada
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById('tab-' + tabId).classList.add('active');
             });
         });
 
-        /* ============================================
-           FUNCOES DO MODAL DA CARTA
-           ============================================ */
-        
-        function abrirCarta(index) {
+        // 2. Função para criar os cards dos amigos na tela
+        function renderizarAmigos() {
+            const grid = document.getElementById('amigos-grid');
+            grid.innerHTML = ''; // Limpa a grid
+
+            amigos.forEach((amigo, index) => {
+                const card = document.createElement('div');
+                card.className = 'amigo-card';
+                // Quando clicar no card, abre a carta correspondente
+                card.onclick = () => abrirModalCarta(index);
+
+                card.innerHTML = `
+                    <div class="amigo-avatar">
+                        <img src="${amigo.avatar}" alt="Foto de ${amigo.nome}" onerror="this.src='https://via.placeholder.com/100/39ff14/000000?text=${amigo.nome.charAt(0)}'">
+                    </div>
+                    <h3>${amigo.nome}</h3>
+                    <p>${amigo.relacao}</p>
+                    <div class="ver-carta">
+                        <span>&#9993;</span> Ler Carta
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 3. Funções para abrir e fechar a Carta (Modal)
+        function abrirModalCarta(index) {
             const amigo = amigos[index];
-            document.getElementById('modal-titulo').textContent = 'Carta de ' + amigo.nome;
+            
+            // Preenche os dados da modal com os dados do amigo clicado
+            document.getElementById('modal-titulo').innerText = `Carta de ${amigo.nome}`;
             document.getElementById('modal-foto').src = amigo.fotoDestaque;
-            document.getElementById('modal-legenda').textContent = amigo.legendaFoto;
-            document.getElementById('modal-mensagem').textContent = amigo.mensagem;
-            document.getElementById('modal-assinatura').textContent = amigo.assinatura;
+            document.getElementById('modal-legenda').innerText = amigo.legendaFoto;
+            document.getElementById('modal-mensagem').innerText = amigo.mensagem;
+            document.getElementById('modal-assinatura').innerText = amigo.assinatura;
+            
+            // Tratamento de erro caso a imagem não exista ainda
+            document.getElementById('modal-foto').onerror = function() {
+                this.src = 'https://via.placeholder.com/400x200/bc13fe/ffffff?text=Foto+em+breve';
+            };
+
+            // Mostra a modal
             document.getElementById('modal-carta').classList.add('active');
         }
 
@@ -1087,76 +1063,33 @@
             document.getElementById(modalId).classList.remove('active');
         }
 
-        // Fechar ao clicar fora
-        document.getElementById('modal-carta').addEventListener('click', function(e) {
-            if (e.target === this) fecharModal('modal-carta');
-        });
-
-        document.getElementById('modal-galeria').addEventListener('click', function(e) {
-            if (e.target === this) fecharModal('modal-galeria');
-        });
-
-        /* ============================================
-           GERAR CARDS DE AMIGOS
-           ============================================ */
-        
-        function gerarCardsAmigos() {
-            const grid = document.getElementById('amigos-grid');
-            grid.innerHTML = '';
-            
-            amigos.forEach((amigo, index) => {
-                const card = document.createElement('div');
-                card.className = 'amigo-card';
-                card.innerHTML = `
-                    <div class="amigo-avatar">
-                        <img src="${amigo.avatar}" alt="${amigo.nome}">
-                    </div>
-                    <h3>${amigo.nome}</h3>
-                    <p>${amigo.relacao}</p>
-                    <button class="ver-carta" onclick="abrirCarta(${index})">
-                        Ver Carta &#10145;
-                    </button>
-                `;
-                grid.appendChild(card);
+        // Fecha a modal se clicar fora dela (no fundo escuro)
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
             });
-        }
+        });
 
-        /* ============================================
-           DECORACOES ANIMADAS
-           ============================================ */
-        
-        function gerarDecoracoes() {
-            const decoracoes = document.getElementById('decoracoes');
-            
-            // Estrelas
-            for (let i = 0; i < 50; i++) {
+        // 4. Efeito de estrelas no fundo (Baseado no seu CSS .decoracoes)
+        function criarEstrelas() {
+            const container = document.getElementById('decoracoes');
+            for(let i = 0; i < 50; i++) {
                 const estrela = document.createElement('div');
                 estrela.className = 'estrela';
-                estrela.style.left = Math.random() * 100 + '%';
-                estrela.style.top = Math.random() * 100 + '%';
-                estrela.style.animationDelay = Math.random() * 2 + 's';
-                decoracoes.appendChild(estrela);
-            }
-            
-            // Sabres
-            for (let i = 0; i < 3; i++) {
-                const sabre = document.createElement('div');
-                sabre.className = i % 2 === 0 ? 'sabre verde' : 'sabre roxo';
-                sabre.style.left = Math.random() * 100 + '%';
-                sabre.style.top = Math.random() * 100 + '%';
-                sabre.style.animationDelay = Math.random() * 8 + 's';
-                decoracoes.appendChild(sabre);
+                estrela.style.left = `${Math.random() * 100}%`;
+                estrela.style.top = `${Math.random() * 100}%`;
+                estrela.style.animationDelay = `${Math.random() * 2}s`;
+                container.appendChild(estrela);
             }
         }
 
-        /* ============================================
-           INICIALIZAR
-           ============================================ */
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            gerarDecoracoes();
-            gerarCardsAmigos();
-        });
+        // Inicia tudo quando a página carregar
+        window.onload = () => {
+            renderizarAmigos();
+            criarEstrelas();
+        };
     </script>
 </body>
 </html>
